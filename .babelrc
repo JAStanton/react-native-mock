@@ -1,0 +1,16 @@
+{
+  presets: [
+    'react-native',
+  ],
+  plugins: [
+    'transform-decorators-legacy',
+    'transform-do-expressions',
+    'transform-function-bind',
+    'transform-class-constructor-call',
+    'syntax-trailing-function-commas',
+    'transform-exponentiation-operator',
+    ['babel-plugin-transform-builtin-extend', {
+        globals: ['Error']
+    }]
+  ],
+}
