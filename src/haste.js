@@ -23,7 +23,7 @@ perfy.start(TIMER);
 
 var data = {
   hasteMap: {},
-  version: require('./react-native-version')
+  version: "0.53.0"
 };
 
 var files = glob.sync(path.join(PROJECT_NODE_MODULES, '**/*.js'));

@@ -1,0 +1,1 @@
+throw"\nLooks like you're trying to require react-native-mock directly.\nYou dont need to do this to access the mocked version of react-native.\nPlease re-check the instructions in the README for how to use it correctly!\n";

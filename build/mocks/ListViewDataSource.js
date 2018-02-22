@@ -1,0 +1,1 @@
+var DataSource=require('ListViewDataSource');DataSource.prototype.toJSON=function(){function ListViewDataSource(dataBlob){var _this=this;this.items=0;try{Object.keys(dataBlob).forEach(function(key){_this.items+=dataBlob[key]&&(dataBlob[key].length||dataBlob[key].size||0);});}catch(e){this.items='unknown';}}return new ListViewDataSource(this._dataBlob);};module.exports=DataSource;
