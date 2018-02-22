@@ -26,9 +26,7 @@ var data = {
   version: "0.53.0"
 };
 
-var files = glob.sync(path.join(PROJECT_NODE_MODULES, '**/*.js'));
-
-console.log(`I am going to read:`, files);
+var files = glob.sync(path.join(PROJECT_NODE_MODULES, '**/*.js'), { nodir: true });
 
 _.forEach(files, function (file) {
   var matches;
