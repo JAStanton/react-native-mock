@@ -28,8 +28,15 @@ var data = {
 
 var files = glob.sync(path.join(PROJECT_NODE_MODULES, '**/*.js'));
 
+console.log(`I am going to read:`, files);
+
 _.forEach(files, function (file) {
-  var matches = providesRegex.exec(fs.readFileSync(file).toString());
+  var matches;
+  try {
+     matched = providesRegex.exec(fs.readFileSync(file).toString());
+  } catch (e) {
+    console.log(`Was unable to read`, file);
+  }
   if (matches && validName.test(matches[1])) {
     var component = matches[1];
     if (component.match(iosTest) && file.endsWith('.android.js')) { // Dont add IOS components if they end in android.js
