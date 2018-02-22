@@ -31,7 +31,7 @@ var files = glob.sync(path.join(PROJECT_NODE_MODULES, '**/*.js'), { nodir: true 
 _.forEach(files, function (file) {
   var matches;
   try {
-     matched = providesRegex.exec(fs.readFileSync(file).toString());
+     matches = providesRegex.exec(fs.readFileSync(file).toString());
   } catch (e) {
     console.log(`Was unable to read`, file);
   }
